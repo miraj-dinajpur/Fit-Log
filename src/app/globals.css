@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+}
