@@ -1,11 +1,13 @@
 import Banner from '@/components/Banner';
+import LibrarySection from '@/components/LibrarySection';
 import React from 'react';
 
 const Homepage = () => {
   return (
     <div>
       <Banner />
-      Welcome to the Homepage!
+      <LibrarySection />
+      
     </div>
   );
 };
