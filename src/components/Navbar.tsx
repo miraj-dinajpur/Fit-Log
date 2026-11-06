@@ -1,17 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Navlinks from "./Navlinks";
+import NavBadge from "./NavBadge";
 
 const Navbar = () => {
   const Links = (
-    <>
-      <li>
-        <Link href="/">Workouts</Link>
-      </li>
-      <li>
-        <Link href="/my-plan">My Plan</Link>
-      </li>
-    </>
+    <Navlinks/>
   );
 
   return (
@@ -58,19 +53,8 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Links}</ul>
         </div>
-        <div className="navbar-end flex gap-4">
-          <Link href="/" className="flex gap-2">
-            Plan
-            <span className="bg-[#c4f000] rounded-full px-3 text-black py-1 text-xs font-bold">
-              {5}
-            </span>
-          </Link>
-          <Link href="/my-plan" className="flex gap-2">
-            My Plan
-            <span className=" text-white border rounded-full px-3 py-1 text-xs font-bold">
-              {7}
-            </span>
-          </Link>
+        <div className="navbar-end ">
+          <NavBadge/>
         </div>
       </div>
     </div>
