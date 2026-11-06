@@ -21,6 +21,12 @@ interface PlanContextType {
     minutes: number;
     calories: number;
   };
+  savedmetrics: {
+    
+    exercises: number;
+    minutes: number;
+    calories: number;
+  };
 }
 
 
@@ -88,6 +94,12 @@ export function PlanProvider({ children }: { children: React.ReactNode }) {
     minutes: plan.reduce((total, item) => total + item.duration, 0),
     calories: plan.reduce((total, item) => total + item.caloriesBurned, 0),
   };
+  
+  const savedmetrics = {
+    exercises: saved.length,
+    minutes: saved.reduce((total, item) => total + item.duration, 0),
+    calories: saved.reduce((total, item) => total + item.caloriesBurned, 0),
+  };
 
 
   const value: PlanContextType = {
@@ -99,6 +111,7 @@ export function PlanProvider({ children }: { children: React.ReactNode }) {
     removeFromSaved,
     markAsDone,
     metrics,
+    savedmetrics,
   };
 
   return <PlanContext.Provider value={value}>{children}</PlanContext.Provider>;

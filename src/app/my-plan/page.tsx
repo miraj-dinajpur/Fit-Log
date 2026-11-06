@@ -4,17 +4,19 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePlan } from "@/context/PlanContext";
+import { X } from "lucide-react";
+import { toast } from "react-toastify";
 
 type Tab = "plan" | "saved";
 type SortOption = "duration" | "calories" | "rating";
 
 export default function MyPlanPage() {
-  const { plan, saved, metrics } = usePlan();
+  const { plan, saved, metrics, savedmetrics, removeFromPlan,removeFromSaved } = usePlan();
 
   const [activeTab, setActiveTab] = useState<Tab>("plan");
   const [sortBy, setSortBy] = useState<SortOption>("duration");
 
-  // Active tab অনুযায়ী list select
+  // Active tab অনুযায়ী list select
   const items = activeTab === "plan" ? plan : saved;
 
   // Original array পরিবর্তন না করে sorting
@@ -43,9 +45,18 @@ export default function MyPlanPage() {
         {/* ── Stats cards ─────────────────────────────────── */}
         <div className="grid grid-cols-1 divide-y divide-[#252836] rounded-2xl border border-[#252836] bg-[#1a1d27] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
-            { label: "Exercises", value: metrics.exercises },
-            { label: "Minutes", value: metrics.minutes },
-            { label: "Calories", value: metrics.calories },
+            {
+              label: "Exercises",
+              value: `${activeTab === "plan" ? metrics.exercises : savedmetrics.exercises}`,
+            },
+            {
+              label: "Minutes",
+              value: `${activeTab === "plan" ? metrics.minutes : savedmetrics.minutes}`,
+            },
+            {
+              label: "Calories",
+              value: `${activeTab === "plan" ? metrics.calories : savedmetrics.calories}`,
+            },
           ].map((s) => (
             <div
               key={s.label}
@@ -171,12 +182,40 @@ export default function MyPlanPage() {
                 </div>
 
                 {/* View Details */}
-                <Link
-                  href={`/workout/${workout.id}`}
-                  className="flex-shrink-0 rounded-xl border border-[#252836] px-4 py-2 text-xs font-semibold text-[#8b95a9] transition hover:border-[#ccff00] hover:text-[#ccff00]"
-                >
-                  View Details
-                </Link>
+                <div className="flex flex-shrink-0 items-center gap-2">
+                  <Link
+                    href={`/workout/${workout.id}`}
+                    className="flex-shrink-0 cursor-pointer rounded-xl border border-[#252836] px-4 py-2 text-xs font-semibold text-white transition hover:border-[#ccff00] hover:text-[#ccff00]"
+                  >
+                    View Details
+                  </Link>
+                  <button
+                    onClick={() => {
+                      if (activeTab === "plan") {
+                        removeFromPlan(workout.id);
+                      } else {
+                        removeFromSaved(workout.id);
+                      }
+                      toast.success("Removed from plan");
+                    }}
+                    className="ml-2 flex-shrink-0 hover:brightness-75 cursor-pointer rounded-xl border bg-[#c4f000] border-[#252836] px-4 py-2 text-xs font-semibold text-black transition "
+                  >
+                    Mark as Done
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      if (activeTab === "plan") {
+                        removeFromPlan(workout.id);
+                      } else {
+                        removeFromSaved(workout.id);
+                      }
+                    }}
+                    className="ml-2 flex-shrink-0 cursor-pointer rounded-xl border border-[#252836] px-4 py-2 text-xs font-semibold text-[#8b95a9] transition hover:border-red-500 hover:text-red-500"
+                  >
+                    <X />
+                  </button>
+                </div>
               </div>
             ))}
           </div>
