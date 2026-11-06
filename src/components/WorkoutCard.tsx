@@ -1,10 +1,15 @@
-import { Workout } from '@/types/workout';
-import Image from 'next/image';
-import React from 'react';
+import { Workout } from "@/types/workout";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const WorkoutCard = ({ workout }: { workout: Workout }) => {
-    return (
-      <div>
+  return (
+    <div>
+      <Link
+        href={`/workout/${workout.id}`}
+        className="group flex flex-col rounded-2xl border border-[#252836] bg-[#1a1d27] transition hover:border-[#ccff00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ccff00]"
+      >
         <figure className="relative h-48 w-full overflow-hidden rounded-t-2xl bg-[#252836]">
           <Image
             src={workout.image}
@@ -80,8 +85,9 @@ const WorkoutCard = ({ workout }: { workout: Workout }) => {
             </span>
           </div>
         </div>
-      </div>
-    );
+      </Link>
+    </div>
+  );
 };
 
 export default WorkoutCard;

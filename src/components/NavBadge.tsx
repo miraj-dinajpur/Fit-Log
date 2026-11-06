@@ -14,7 +14,7 @@ const NavBadge = () => {
           </span>
         </Link>
         <Link href="/my-plan" className="flex gap-2">
-          My Plan
+          Saved
           <span className=" text-white border rounded-full px-3 py-1 text-xs font-bold">
             {saved.length}
           </span>
