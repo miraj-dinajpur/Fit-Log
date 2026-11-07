@@ -182,7 +182,7 @@ export default function MyPlanPage() {
                 </div>
 
                 {/* View Details */}
-                <div className="flex flex-shrink-0 items-center gap-2">
+                <div className="flex flex-col md:flex-row lg:flex-row flex-shrink-0 items-center gap-2 ">
                   <Link
                     href={`/workout/${workout.id}`}
                     className="flex-shrink-0 cursor-pointer rounded-xl border border-[#252836] px-4 py-2 text-xs font-semibold text-white transition hover:border-[#ccff00] hover:text-[#ccff00]"
