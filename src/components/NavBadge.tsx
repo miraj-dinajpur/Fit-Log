@@ -9,7 +9,7 @@ const NavBadge = () => {
       <div className="flex gap-4">
         <Link href="/my-plan" className="flex gap-2">
           Plan
-          <span className="bg-[#c4f000] rounded-full px-3 text-black py-1 text-xs font-bold">
+          <span className="bg-[#ccff00] rounded-full px-3 text-black py-1 text-xs font-bold">
             {plan.length}
           </span>
         </Link>

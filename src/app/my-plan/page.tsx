@@ -196,7 +196,7 @@ export default function MyPlanPage() {
                       } else {
                         removeFromSaved(workout.id);
                       }
-                      toast.success("Removed from plan");
+                      toast.success("Marked as done!");
                     }}
                     className="ml-2 flex-shrink-0 hover:brightness-75 cursor-pointer rounded-xl border bg-[#c4f000] border-[#252836] px-4 py-2 text-xs font-semibold text-black transition "
                   >
