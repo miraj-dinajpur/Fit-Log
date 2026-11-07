@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏋️ FitLog – Workout Library
 
-## Getting Started
+A modern workout library designed to help users explore exercises, organize their daily workout plans, and track their fitness activities.
 
-First, run the development server:
+FitLog provides a simple and organized way to discover workouts, save favorite exercises, and manage daily fitness routines through a clean and responsive interface.
+
+## 🚀 Live Demo
+
+[Visit FitLog](https://workout-library-nine.vercel.app/](https://fit-log-rose-beta.vercel.app/))
+
+## ✨ Key Features
+
+1. **Workout Library** – Browse a collection of workouts with exercise information, images, difficulty levels, and equipment details.
+
+2. **Workout Details** – View detailed information about each exercise, including instructions, duration, calories, sets, and reps.
+
+3. **My Plan** – Add workouts to your daily plan and manage your selected exercises in one place.
+
+4. **Saved Workouts** – Save your favorite workouts and access them whenever you need.
+
+5. **Workout Statistics & Sorting** – Track exercises, total workout duration, and estimated calories. Sort workouts by duration, calories, or rating.
+
+## 🛠️ Technologies Used
+
+- **Next.js** – React framework for building the application.
+- **React** – Component-based user interface.
+- **TypeScript** – Type safety and better code maintainability.
+- **Tailwind CSS** – Styling and responsive layouts.
+- **React Toastify** – Notifications and feedback messages.
+- **Lucide React** – Icons and visual elements.
+- **JSON Server / REST API** – Workout data management.
+
+## 📸 Project Preview
+
+Explore the live application to see the interface and its features.
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally.
+
+**1. Clone the repository**
+
+```bash
+git clone [https://github.com/miraj-dinajpur/Fit-Log](https://github.com/miraj-dinajpur/Fit-Log)
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd FitLog
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**5. Open in your browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If your project uses JSON Server, start it separately using your configured API command.
 
-## Learn More
+## 📁 Project Purpose
 
-To learn more about Next.js, take a look at the following resources:
+FitLog was developed as a project to practice and demonstrate modern frontend development concepts, including:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React components and props
+- State management with React Hooks
+- Context API
+- Dynamic routing
+- API data fetching
+- TypeScript interfaces and types
+- Responsive UI development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Author
 
-## Deploy on Vercel
+**Mahmudul Hasan**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [miraj-dinajpur](https://github.com/miraj-dinajpur)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ If you find this project useful, feel free to explore it and share your feedback!
