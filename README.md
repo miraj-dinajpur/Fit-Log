@@ -6,7 +6,7 @@ FitLog provides a simple and organized way to discover workouts, save favorite e
 
 ## 🚀 Live Demo
 
-[Visit FitLog](https://workout-library-nine.vercel.app/](https://fit-log-rose-beta.vercel.app/))
+[Visit FitLog](https://workout-library-nine.vercel.app)
 
 ## ✨ Key Features
 
@@ -41,7 +41,7 @@ Follow these steps to run the project locally.
 **1. Clone the repository**
 
 ```bash
-git clone [https://github.com/miraj-dinajpur/Fit-Log](https://github.com/miraj-dinajpur/Fit-Log)
+git clone (https://github.com/miraj-dinajpur/Fit-Log)
 ```
 
 **2. Navigate to the project folder**
