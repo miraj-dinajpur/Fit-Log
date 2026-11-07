@@ -4,13 +4,12 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto my-10">
-      <section className="relative overflow-hidden rounded-2xl border border-[#252836] bg-[#1a1d27] px-6 py-10 sm:px-8 md:px-12 md:py-14">
+    <div className="container mx-auto my-10 ">
+      <section className="relative overflow-hidden bg-[#14161c] rounded-2xl border border-[#252836] px-6 py-10 sm:px-8 md:px-12 md:py-14">
         <div className="flex flex-col-reverse items-center gap-8 md:flex-row md:justify-between">
-
           {/* Text */}
           <div className="flex-1 text-center md:text-left">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#ccff00]">
+            <p className="mb-3 text-xs oswald font-bold uppercase tracking-[0.3em] text-[#ccff00]">
               Workout Library
             </p>
 
@@ -21,9 +20,8 @@ const Banner = () => {
             </h1>
 
             <p className="mx-auto mb-8 max-w-md text-sm leading-7 text-[#8b95a9] md:mx-0 md:text-base">
-              FitLog is a dark, no-nonsense gym companion: pick a lift, lock
-              it into today&apos;s plan, and watch the week&apos;s work add
-              up.
+              FitLog is a dark, no-nonsense gym companion: pick a lift, lock it
+              into today&apos;s plan, and watch the week&apos;s work add up.
             </p>
 
             <a
@@ -59,7 +57,6 @@ const Banner = () => {
               priority
             />
           </div>
-
         </div>
       </section>
     </div>
