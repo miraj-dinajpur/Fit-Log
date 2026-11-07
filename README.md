@@ -6,7 +6,7 @@ FitLog provides a simple and organized way to discover workouts, save favorite e
 
 ## 🚀 Live Demo
 
-[Visit FitLog](https://workout-library-nine.vercel.app)
+[Visit FitLog](https://fit-log-rose-beta.vercel.app/)
 
 ## ✨ Key Features
 
